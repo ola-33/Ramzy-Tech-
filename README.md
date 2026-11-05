@@ -1,24 +1,18 @@
-# RAMZY TECH
+# Ramzy Tech website
 
-A responsive futuristic technology-store landing page built with plain HTML, CSS and JavaScript.
+Static HTML/CSS/JavaScript website. No build command or environment variables are required.
 
-## Preview locally
-Open `index.html` in a browser.
+## WhatsApp
+The site is configured to send enquiries to `2348104734570` using WhatsApp click-to-chat links. The number is stored in `script.js` as `WHATSAPP_NUMBER`.
 
-## Connect WhatsApp
-1. Open `script.js`.
-2. Find `const WHATSAPP_NUMBER = "2340000000000";`
-3. Replace it with your WhatsApp Business number in international format, without `+`, spaces or dashes.
-   Example format for Nigeria: `2348012345678`.
+## Deploy/update on Vercel
+1. Extract this ZIP.
+2. Upload the contents of the `ramzy-tech` folder to the root of your GitHub repository (index.html, styles.css, script.js, README.md).
+3. Commit the changes.
+4. In Vercel, open the connected project and wait for the new deployment.
+5. Test every WhatsApp enquiry button on your phone.
 
-## Important before taking orders
-The products and product artwork are sample catalogue entries. Confirm supplier stock, exact specifications, total landed cost, shipping, delivery estimates, returns and payment arrangements before advertising or accepting payment.
+No environment variables, build command, or output directory are needed.
 
-This is a catalogue and enquiry website, not a full checkout or payment-processing system.
-
-## Deploy on Vercel
-1. Upload `index.html`, `styles.css`, `script.js`, and `README.md` to a GitHub repository.
-2. In Vercel, import that repository.
-3. Choose **Other** as the framework preset if prompted.
-4. Leave Build Command and Output Directory blank (or use `.` for output if Vercel requires a value).
-5. Deploy. No build step is required.
+## Important
+The products shown are sample listings, not verified supplier inventory. Confirm supplier stock, exact specifications, total cost, shipping, delivery estimates, return policy, and final customer price before accepting orders. This site currently collects enquiries; it does not process payments or place supplier orders.
