@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chat with RAMZY AI, the Ramzy Tech product assistant.">
+  <meta name="theme-color" content="#070b18">
+  <title>RAMZY AI | Ramzy Tech</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070b18;--panel:#10182b;--line:#263653;--text:#f5f7ff;--muted:#aab4cb;--blue:#42c8ff;--purple:#9a6bff}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 80% 0%,#34216b55,transparent 42%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;display:flex;flex-direction:column}
+    header{padding:18px max(20px,calc((100% - 850px)/2));border-bottom:1px solid #ffffff18;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:800;letter-spacing:.08em;text-decoration:none;color:var(--text)}.brand span{color:var(--blue)}header a.back{color:var(--muted);text-decoration:none;font-size:.9rem}
+    main{width:min(850px,100%);margin:36px auto;padding:0 18px;flex:1;display:flex;flex-direction:column}
+    .intro{text-align:center;margin:0 0 24px}.eyebrow{color:var(--blue);font-size:.72rem;font-weight:800;letter-spacing:.18em}.intro h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;margin:10px 0}.intro p{color:var(--muted);margin:0}
+    .chat{border:1px solid var(--line);border-radius:20px;background:#0d1527eF;box-shadow:0 20px 70px #0005;display:flex;flex-direction:column;min-height:440px;max-height:68vh;overflow:hidden}
+    .chat-head{padding:15px 18px;border-bottom:1px solid #ffffff14;display:flex;align-items:center;gap:12px}.status{width:10px;height:10px;border-radius:50%;background:#50e3a4;box-shadow:0 0 12px #50e3a4}.chat-head small{display:block;color:var(--muted)}
+    #messages{padding:20px;overflow-y:auto;display:flex;flex-direction:column;gap:14px;flex:1}.bubble{max-width:min(85%,620px);padding:12px 15px;border-radius:15px;white-space:pre-wrap;overflow-wrap:anywhere}.bot{align-self:flex-start;background:#17243c;border:1px solid #ffffff12}.user{align-self:flex-end;background:linear-gradient(110deg,#087eaf,#6046b9);color:white}.hint{color:var(--muted);font-size:.84rem;text-align:center;margin:0 18px 12px}
+    form{display:flex;gap:10px;padding:14px;border-top:1px solid #ffffff14;background:#0a1120}textarea{resize:none;min-height:48px;max-height:120px;flex:1;border:1px solid #33445f;border-radius:12px;background:#111c30;color:var(--text);padding:12px;font:inherit;outline:none}textarea:focus{border-color:var(--blue)}button{border:0;border-radius:12px;padding:0 20px;background:linear-gradient(110deg,#087eaf,#7250d9);color:white;font-weight:750;font:inherit;cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}
+    .below{text-align:center;color:var(--muted);font-size:.85rem;margin:18px 0}.below a{color:var(--blue)}footer{text-align:center;padding:20px;color:#8491aa;font-size:.78rem}
+    @media(max-width:560px){main{margin:24px auto}.chat{min-height:55vh;max-height:68vh}form{padding:10px}button{padding:0 14px}.bubble{max-width:92%}}
+  </style>
+</head>
+<body>
+  <header><a class="brand" href="/">RAMZY<span>TECH</span></a><a class="back" href="/">← Back to store</a></header>
+  <main>
+    <section class="intro"><div class="eyebrow">YOUR TECH SHOPPING ASSISTANT</div><h1>Meet RAMZY AI</h1><p>Ask about products, product choices, or how to enquire with Ramzy Tech.</p></section>
+    <section class="chat" aria-label="RAMZY AI chat">
+      <div class="chat-head"><span class="status" aria-hidden="true"></span><div><strong>RAMZY AI</strong><small>Online assistant · Verify availability before ordering</small></div></div>
+      <div id="messages" role="log" aria-live="polite"><div class="bubble bot">Hello! I'm RAMZY AI. What would you like to know about Ramzy Tech today?</div></div>
+      <p class="hint">Please don't share passwords, payment details, or private information.</p>
+      <form id="chat-form"><textarea id="message" maxlength="4000" rows="1" placeholder="Type your message…" aria-label="Your message" required></textarea><button id="send" type="submit">Send</button></form>
+    </section>
+    <p class="below">Need a person? <a href="https://wa.me/2348104734570" target="_blank" rel="noopener noreferrer">Contact Ramzy Tech on WhatsApp</a>.</p>
+  </main>
+  <footer>RAMZY AI can make mistakes. Confirm prices, stock and delivery details with Ramzy Tech before ordering.</footer>
+  <script src="/assistant.js" defer></script>
+</body>
+</html>
