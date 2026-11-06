@@ -61,7 +61,6 @@ module.exports = async function handler(req, res) {
           systemInstruction: { parts: [{ text: systemInstruction }] },
           contents: [{ role: "user", parts: [{ text: message }] }],
           generationConfig: {
-            temperature: 0.4,
             maxOutputTokens: 500
           }
         })
